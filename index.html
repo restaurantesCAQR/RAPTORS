@@ -1,217 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raptors Restaurant</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+<title>Raptors Restaurant</title>
 
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      min-height:100vh;
-      color:white;
-      text-align:center;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-      background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.82)),
-        url("jurasico.jpg");
-      background-size:cover;
-      background-position:center center;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
+<style>
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-    .overlay{
-      width:100%;
-      max-width:1100px;
-      min-height:calc(100vh - 48px);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+body{
+font-family:Arial, Helvetica, sans-serif;
+min-height:100vh;
+color:white;
+text-align:center;
 
-    .card{
-      width:100%;
-      max-width:420px;
-      padding:28px 22px;
-      border-radius:22px;
-      background:rgba(0,0,0,0.35);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      box-shadow:0 10px 35px rgba(0,0,0,0.35);
-    }
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+url("jurasico.jpg");
 
-    .logo{
-      width:150px;
-      max-width:55%;
-      height:auto;
-      margin:0 auto 22px auto;
-      display:block;
-    }
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 
-    .buttons{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      margin-top:8px;
-    }
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px;
+}
 
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
+.overlay{
+width:100%;
+max-width:1100px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-      width:100%;
-      min-height:54px;
-      padding:14px 18px;
+.card{
+width:100%;
+max-width:420px;
+padding:28px 22px;
 
-      border:2px solid #d4af37;
-      border-radius:14px;
-      background:rgba(0,0,0,0.45);
+border-radius:22px;
 
-      color:#f1c40f;
-      text-decoration:none;
-      font-size:16px;
-      font-weight:700;
+background:rgba(0,0,0,0.35);
+backdrop-filter: blur(4px);
 
-      transition:all 0.25s ease;
-    }
+box-shadow:0 10px 35px rgba(0,0,0,0.35);
+}
 
-    .btn i{
-      font-size:18px;
-    }
+.logo{
+width:150px;
+margin:0 auto 25px auto;
+display:block;
+}
 
-    .btn:hover{
-      transform:translateY(-2px);
-      background:rgba(212,175,55,0.12);
-      box-shadow:0 0 18px rgba(212,175,55,0.25);
-    }
+.buttons{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
 
-    .footer{
-      margin-top:18px;
-      font-size:12px;
-      color:rgba(255,255,255,0.75);
-    }
+.btn{
 
-    /* Tablet y desktop */
-    @media (min-width: 768px){
-      .card{
-        max-width:500px;
-        padding:38px 34px;
-      }
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 
-      .logo{
-        width:190px;
-        margin-bottom:30px;
-      }
+width:100%;
+padding:16px;
 
-      .buttons{
-        gap:18px;
-      }
+border-radius:14px;
 
-      .btn{
-        min-height:62px;
-        font-size:18px;
-        border-radius:16px;
-      }
+border:2px solid #d4af37;
 
-      .btn i{
-        font-size:20px;
-      }
+background:rgba(0,0,0,0.45);
 
-      .footer{
-        font-size:13px;
-        margin-top:22px;
-      }
-    }
+color:#f1c40f;
+text-decoration:none;
+font-size:16px;
+font-weight:bold;
 
-    /* Pantallas grandes */
-    @media (min-width: 1200px){
-      .card{
-        max-width:560px;
-      }
+transition:all .25s;
+}
 
-      .logo{
-        width:210px;
-      }
+.btn i{
+font-size:18px;
+}
 
-      .btn{
-        font-size:19px;
-      }
-    }
+.btn:hover{
+transform:translateY(-2px);
+background:rgba(212,175,55,0.12);
+box-shadow:0 0 18px rgba(212,175,55,0.25);
+}
 
-    /* Celulares pequeños */
-    @media (max-width: 420px){
-      body{
-        padding:16px;
-        background-attachment:scroll;
-      }
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:.8;
+}
 
-      .overlay{
-        min-height:calc(100vh - 32px);
-      }
+/* Desktop */
 
-      .card{
-        padding:22px 16px;
-        border-radius:18px;
-      }
+@media (min-width:768px){
 
-      .logo{
-        width:120px;
-        max-width:50%;
-      }
+.card{
+max-width:500px;
+padding:40px;
+}
 
-      .btn{
-        min-height:50px;
-        font-size:15px;
-      }
+.logo{
+width:190px;
+}
 
-      .btn i{
-        font-size:16px;
-      }
-    }
-  </style>
+.btn{
+font-size:18px;
+padding:18px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <div class="overlay">
-    <div class="card">
-      <img src="LOGO.png" class="logo" alt="Logo Raptors">
+<div class="overlay">
 
-      <div class="buttons">
-        <a class="btn" href="https://www.instagram.com/raptorspty/" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
+<div class="card">
 
-        <a class="btn" href="https://www.facebook.com/raptorspanama/" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-          <span>Facebook</span>
-        </a>
+<img src="LOGO.png" class="logo" alt="Raptors">
 
-        <a class="btn" href="https://wa.me/NUMERO_AQUI" target="_blank">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>WhatsApp</span>
-        </a>
-      </div>
+<div class="buttons">
 
-      <div class="footer">Raptors</div>
-    </div>
-  </div>
+<a class="btn" href="https://qrco.de/be76ZY?fbclid=PAdGRleAQdjZxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacw5DrtuIvFOGF3sqwwq4TMoX5BsrEVrvehdWdToeZ2MIHoOgiA5LRYazwDCg_aem_MZb9ll03779PF_YJAjMwbg&utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">
+<i class="fa-solid fa-book-open"></i>
+Menú
+</a>
+
+<a class="btn" href="https://www.degustapanama.com/panama/restaurante/raptors_108610.html" target="_blank">
+<i class="fa-solid fa-utensils"></i>
+Degusta
+</a>
+
+<a class="btn" href="https://www.instagram.com/raptorspty/" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+Instagram
+</a>
+
+<a class="btn" href="https://www.facebook.com/raptorspanama/" target="_blank">
+<i class="fa-brands fa-facebook"></i>
+Facebook
+</a>
+
+<a class="btn" href="https://wa.me/50766443464" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+<div class="footer">
+Raptors
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
